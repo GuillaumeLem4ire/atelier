@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Couleur barre de statut -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Titre de l'application -->
+    <title>Note++</title>
+    <!-- CSS bibliothèque Framework7 -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/framework7-icons.css">
+  </head>
+  <body>
+    <!-- Element racine de l'application -->
+    <div id="app">
+      <!-- Barre de statut -->
+      <div class="statusbar"></div>
+
+      <!-- Vue principale (classe .view-main ) -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Navbar supérieure -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Note++</div>
+            </div>
+          </div>
+
+          <!-- Contenu de la page -->
+            <div class="fab fab-right-bottom" id="addBtn">
+			<a href="#">
+				<i class="icon f7-icons">add</i>				
+			</a>
+		</div>
+          <div class="page-content">
+              
+        <div class="searchbar-backdrop"></div>
+              <form class="searchbar">
+                  <div class="searchbar-inner">
+                            <div class="searchbar-input-wrap">
+                            <input type="search" placeholder="Search">
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                      </div>
+                      <span class="searchbar-disable-button">Cancel</span>
+                  </div>
+              </form>
+              
+
+      
+
+           <!-- div à afficher si aucun mémo n'est enregistré -->
+            <div class="block-title" id="noMemo">
+              Aucun mémo
+            </div>
+
+            <!-- liste des titres des mémos -->
+            <div class="block">
+              <div class="list links-list">
+                <ul id="memoList">
+                  <!-- template qui sera clôné autant de fois que nécessaire
+                       par JS -->
+                  <li class="template swipeout" style="display:none;">
+                    <div class="swipeout-content">
+                        <a href="#"></a>
+                    </div>
+                      <div class="swipeout-actions-right">
+							<a href="#" data-confirm="Voulez-vous VRAIMENT supprimer ? Genre VRAIMENT ???!!!" class="swipeout-delete">Supprimer</a>
+				        </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- Bibliothèque Cordova (phantôme) -->
+	<script type="text/javascript" src="cordova.js"></script>
+	
+    <!-- Bibliothèque jQuery -->
+    <script type="text/javascript" src="lib/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- Bibliothèque JS de Framework7 -->
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <!-- JS de l'application -->
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
